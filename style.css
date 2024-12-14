@@ -26,6 +26,7 @@ section {
 body.active {
   --text-color: #fff;
   --bg-color: #0f0c27;
+   --bg-color:black;
 }
 body {
   background: var(--bg-color);
@@ -102,11 +103,12 @@ header.shadow {
   gap: 1rem;
 }
 .home-img {
-  order: 3;
-  
+  order: 2;
 }
 .home-img img {
-  width: 100%;
+  width: 80%;
+ 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
   border-radius: 47%;
 }
 .home-text span {
@@ -157,8 +159,9 @@ header.shadow {
 }
  
 .about-img img {
-  width: 80%;
+  width: 70%;
   margin-top: -21%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
   border-radius: 20%;
 }
 .about-text p {
@@ -224,13 +227,13 @@ span {
   border-radius: 0.5rem;
 }
 .html-bar {
-  width: 94%;
+  width: 98%;
 }
 .css-bar {
-  width: 84%;
+  width: 85%;
 }
 .js-bar {
-  width: 74%;
+  width: 80%;
 }
 .react-bar {
   width: 80%;
@@ -486,4 +489,67 @@ form textarea {
   .contact-button{
     margin-left: 25%;
   }
+}
+/* Container for the cards */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Styling for individual cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Card text styling */
+.card-text {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+.typing-effect {
+  font-size: 24px;
+  color:darkgreen;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#typed-content {
+  border-right: 2px solid black; /* Cursor effect */
+  display: inline-block;
 }
